@@ -1,0 +1,104 @@
+body {
+  background-color: var(--bg_s);
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+}
+
+.container {
+  background-color: var(--bg_s);
+  padding: 2rem;
+  border-left: dashed 3px var(--bg);
+  border-right: dashed 3px var(--bg);
+}
+
+.about-me {
+  border-left: solid 3px var(--bg);
+  padding-left: 2rem;
+}
+
+.education-courses {
+  margin-top: 1rem;
+  padding: 0.5rem 0 0.5rem 0;
+  border-top: solid 3px var(--bg);
+  border-bottom: solid 3px var(--bg);
+}
+
+.projects ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.projects li {
+  background-color: var(--bg1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.projects li strong {
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue-dim);
+}
+
+.projects li p {
+  margin: 6px 0;
+}
+
+.small-link {
+  font-size: 0.6rem;
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.title-link {
+  text-decoration: none;
+}
+.title-link:hover {
+  text-decoration: none;
+}
+
+.fa {
+  color: var(--fg4);
+}
+
+.courses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 0;
+}
+
+.courses-list li {
+  position: relative;
+  padding-left: 1.5em;
+  color: var(--bg4);
+}
+
+.courses-list li a {
+  font-weight: bold;
+}
+
+.courses-list li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--bg3);
+}
+
+.languages {
+  margin-left: 2rem;
+}
+.languages strong {
+  color: var(--yellow-dim);
+}

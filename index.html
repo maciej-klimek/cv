@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maciej Klimek - CV</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link id="theme-stylesheet" rel="stylesheet" href="css/colors_dark.css" />
+    <link rel="stylesheet" href="css/decorations.css" />
+    <link rel="stylesheet" href="css/print.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="scripts/numbers.js" defer></script>
+    <script src="scripts/download.js" defer></script>
+  </head>
+  <body>
+    <div class="action-panel">
+      <!-- Theme toggle switch button -->
+      <div class="theme-toggle">
+        <span>Change the theme</span>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="download-container">
+        <span class="download-text">Download:</span>
+        <div class="download-buttons">
+          <button id="download-pdf"><i class="fa fa-lg fa-download"></i></button>
+          <span style="color: var(--fg4)">or </span>
+          <span class="shortcut">Ctrl + P</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <div class="main-content">
+          <div class="window-circles">
+            <span class="circle red"></span>
+            <span class="circle yellow"></span>
+            <span class="circle green"></span>
+          </div>
+          <div class="line-numbers">
+            <ul id="line-numbers"></ul>
+          </div>
+          <div class="header-bio">
+            <header>
+              <div class="name-photo">
+                <img src="images/cv_photo.jpg" alt="Maciej Klimek" class="profile-photo" />
+                <section>
+                  <h1>Maciej Klimek</h1>
+                  <p>ICT Student | AGH UST</p>
+                </section>
+              </div>
+
+              <section class="contact">
+                <h2>.my-links</h2>
+                <p>
+                  <i class="fa fa-envelope fa-lg"></i>
+                  <a href="mailto:maciej.klimek09@gmail.com">maciej.klimek09@gmail.com</a>
+                </p>
+                <p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a href="https://github.com/maciej-klimek">https://github.com/maciej-klimek</a>
+                </p>
+                <p>
+                  <i class="fa fa-linkedin fa-lg"></i>
+                  <a href="https://www.linkedin.com/in/maciej-klimek/">https://www.linkedin.com/in/maciej-klimek/</a>
+                </p>
+              </section>
+            </header>
+
+            <section class="about-me">
+              <h2>.about-me</h2>
+              <p>
+                Hi! I’m Maciej Klimek, third year student of ICT at AGH University of Science and Technology. I’m
+                currently seeking my first commercial experience in the form of an internship. I am particularly
+                interested in networking, Dev/TechOps, network security and web development, areas that I am passionate
+                about and eager to utilize in my work.
+              </p>
+            </section>
+          </div>
+          <div class="education-courses">
+            <section class="courses">
+              <h2>.courses</h2>
+              <ul class="courses-list">
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/326e39b2-1a45-4425-b1f2-a5f6636649ba.pdf"
+                    >Operating Systems</a
+                  >
+                  - Linux, LVM, TCP/IP sockets...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/28c1bd99-92df-4550-815f-bc8afcc5d56d.pdf"
+                    >Security of ICT Systems</a
+                  >
+                  - Encryption techniques and Algorithms, principles of cyberSec...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/aded32d4-1d14-499b-a70c-68451b1457d4.pdf"
+                    >Web Development</a
+                  >
+                  - HTTPS, React, Typescript, Tailwind CSS, nginx...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/96f8a5ab-764e-47bb-a7c8-52b0849cebc8.pdf"
+                    >Algorithms and Data Structures</a
+                  >
+                  - Python, problem solving...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/afdffb42-fdab-4034-b2b6-8e43520a52fa.pdf"
+                    >Software Engineering</a
+                  >
+                  - Agile, Scrum, Software Documentation...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/00640208-bd53-402f-b20a-a1b5975eeb10.pdf"
+                    >Large-Scale Data Distribution Systems</a
+                  >
+                  - Virtualization, Cloud Computing, Docker, system design...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/ce222a06-ebcb-499e-b94a-104ba57eec10.pdf"
+                    >Next Generation IP Networks</a
+                  >
+                  - IP, BGP, OSPF, ISIS, ARP...
+                </li>
+              </ul>
+            </section>
+            <section class="education">
+              <div class="school-info">
+                <img src="images/agh_logo_white.png" alt="AGH University Logo" class="school-logo" />
+                <div>
+                  <p><strong>AGH University of Science and Technology</strong></p>
+                  <p>(2022 - present)</p>
+                </div>
+              </div>
+              <section class="languages">
+                <p>🇵🇱 <strong>Polish</strong> (native)</p>
+                <p>🇬🇧 <strong>English C1</strong> - ACERT Certificate</p>
+              </section>
+            </section>
+          </div>
+          <div>
+            <section class="projects">
+              <h2>.projects</h2>
+              <ul>
+                <li>
+                  <a href="https://github.com/maciej-klimek/guess-the-beat-webapp" target="_blank"
+                    ><strong>🎧 Guess the Beat!</strong></a
+                  >
+
+                  <p>A web application that allows users to guess songs based on short clips.</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a class="small-link" href="https://github.com/maciej-klimek/guess-the-beat-webapp" target="_blank">
+                    https://github.com/maciej-klimek/guess-the-beat-webapp
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/maciej-klimek/english-or-spanish" target="_blank"
+                    ><strong>💬 English or Spanish</strong></a
+                  >
+                  <p>A game that tests the player’s ability to distinguish between English and Spanish words.</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a class="small-link" href="https://github.com/maciej-klimek/english-or-spanish" target="_blank">
+                    https://github.com/maciej-klimek/english-or-spanish
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/maciej-klimek/type-master-desktop-app" target="_blank"
+                    ><strong>⌨️ TypeMaster</strong></a
+                  >
+                  <p>A desktop application designed to improve typing speed and accuracy.</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a class="small-link" href="https://github.com/maciej-klimek/type-master-desktop-app" target="_blank">
+                    https://github.com/maciej-klimek/type-master-desktop-app
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/maciej-klimek/simple-server-contenerizaion" target="_blank"
+                    ><strong>📦 Simple Server Contenerizaion</strong></a
+                  >
+                  <p>Simple project made for learning Docker and contenerizaion principles</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a
+                    class="small-link"
+                    style="font-size: 0.5rem"
+                    href="https://github.com/maciej-klimek/simple-server-contenerizaion"
+                    target="_blank"
+                  >
+                    https://github.com/maciej-klimek/simple-server-contenerizaion
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://github.com/AGH-Code-Industry/ej-mordo-flanki" target="_blank"
+                    ><strong>🎮 Ej Mordo Flanki?</strong></a
+                  >
+                  <p>A collaborative project built with AGH Code Industry, featuring a game-like application.</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a class="small-link" href="https://github.com/AGH-Code-Industry/ej-mordo-flanki" target="_blank">
+                    https://github.com/AGH-Code-Industry/ej-mordo-flanki
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/maciej-klimek/job-scraper-desktop-app" target="_blank"
+                    ><strong>🗃️ JobScrapper</strong></a
+                  >
+                  <p>A desktop application for scraping IT job listings from various websites.</p>
+                  <i class="fa fa-github fa-lg"></i>
+                  <a class="small-link" href="https://github.com/maciej-klimek/job-scraper-desktop-app" target="_blank">
+                    https://github.com/maciej-klimek/job-scraper-desktop-app
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <footer>
+            <p class="footer-note">
+              I consent to the processing of my personal data for the purposes necessary for the recruitment process, in
+              accordance with the Act of May 10, 2018 on the Protection of Personal Data (Journal of Laws of 2018, item
+              1000) and in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of
+              April 27, 2016.
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      const themeToggleButton = document.getElementById("theme-toggle");
+      const themeStylesheet = document.getElementById("theme-stylesheet");
+      const schoolLogo = document.querySelector(".school-logo");
+
+      themeToggleButton.addEventListener("click", () => {
+        if (themeStylesheet.getAttribute("href") === "css/colors_dark.css") {
+          themeStylesheet.setAttribute("href", "css/colors_light.css");
+          schoolLogo.src = "images/agh_logo.png";
+        } else {
+          themeStylesheet.setAttribute("href", "css/colors_dark.css");
+          schoolLogo.src = "images/agh_logo_white.png";
+        }
+      });
+    </script>
+  </body>
+</html>

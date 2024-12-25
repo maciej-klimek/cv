@@ -1,0 +1,55 @@
+body {
+  font-family: "Cascadia Code", sans-serif;
+  color: var(--fg2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--yellow);
+}
+
+header p {
+  font-size: 1rem;
+  color: var(--fg4);
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--yellow-dim);
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.contact p {
+  font-size: 0.8rem;
+}
+
+a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--purple-dim);
+}
+
+a:hover {
+  color: var(--purple-dim);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--purple);
+}
+
+hr {
+  color: var(--bg);
+}
+
+footer {
+  color: var(--bg2);
+}

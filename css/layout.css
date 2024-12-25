@@ -1,0 +1,56 @@
+.header-bio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header {
+  flex: 1;
+}
+
+.about-me {
+  flex: 1;
+}
+
+.name-photo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.profile-photo {
+  width: 5rem;
+  border-radius: 30%;
+}
+
+.container {
+  width: 210mm;
+  height: 96vh;
+  min-height: 297mm;
+  margin: 0 auto;
+}
+
+.education-courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education {
+  flex: 0.7;
+}
+
+.courses {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.school-info {
+  display: flex;
+  align-items: center;
+}
+
+.school-logo {
+  width: 7rem;
+}

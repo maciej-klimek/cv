@@ -1,0 +1,131 @@
+.action-panel {
+  position: absolute;
+  top: 50%;
+  right: 10rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  background-color: var(--bg1);
+  border-radius: 1rem;
+  border: dashed 3px var(--bg);
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.switch {
+  position: relative;
+  width: 2rem;
+  height: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg_h);
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 0.75rem;
+  width: 0.75rem;
+  left: 0.125rem;
+  bottom: 0.125rem;
+  background-color: var(--fg);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: var(--bg_h);
+}
+
+input:checked + .slider:before {
+  transform: translateX(1rem);
+}
+
+.download-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: solid 1px var(--bg_h);
+  padding-top: 0.5rem;
+}
+
+.download-text {
+  font-size: 0.8rem;
+  color: var(--fg4);
+  text-align: center;
+}
+
+.download-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action-panel button {
+  background-color: var(--bg2);
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-panel button:hover {
+  background-color: var(--bg_h);
+  color: var(--bg1);
+}
+
+.shortcut {
+  background-color: var(--bg2);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1600px) {
+  .action-panel {
+    margin: none;
+    padding: none;
+    flex: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    flex-direction: row; /* Ensure the layout remains horizontal */
+    justify-content: center;
+    border: none;
+    border-radius: 0;
+  }
+  .download-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    border-left: solid 1px var(--bg_h);
+    padding: 0;
+    padding-left: 1rem;
+  }
+}

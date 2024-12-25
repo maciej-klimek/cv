@@ -1,0 +1,84 @@
+body {
+  animation: backgroundAnimation 10s ease-in-out infinite;
+  background: radial-gradient(circle, var(--anim1), var(--anim2));
+  background-size: 150% 150%;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
+    background-size: 150% 150%;
+  }
+  50% {
+    background-position: 100% 100%;
+    background-size: 200% 200%;
+  }
+  100% {
+    background-position: 0% 0%;
+    background-size: 150% 150%;
+  }
+}
+
+.window-circles {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red {
+  background-color: var(--red-dim);
+}
+
+.yellow {
+  background-color: var(--yellow-dim);
+}
+
+.green {
+  background-color: var(--green-dim);
+}
+
+.line-numbers {
+  position: absolute;
+  top: 110px;
+  left: -20px;
+  color: var(--bg2);
+  font-size: 0.8rem;
+  text-align: left;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.line-numbers ul {
+  margin: 0;
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.line-numbers ul li {
+  line-height: 1.5em;
+}
+
+.main-content {
+  position: relative;
+  padding-left: 1rem;
+}
+
+#theme-toggle {
+  font-family: "Cascadia Code";
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.3s ease;
+  color: var(--blue);
+}

@@ -1,0 +1,21 @@
+@media print {
+  #theme-toggle {
+    display: none !important;
+  }
+  #download-pdf {
+    display: none !important;
+  }
+
+  body {
+    animation: none !important;
+    background: var(--bg_s) !important;
+    margin: none !important;
+    padding: none !important;
+  }
+  .container {
+    border: none !important;
+    height: 100% !important;
+    margin: none !important;
+    padding: none !important;
+  }
+}
