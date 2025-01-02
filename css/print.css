@@ -5,6 +5,9 @@
   #download-pdf {
     display: none !important;
   }
+  .action-panel {
+    display: none !important;
+  }
 
   body {
     animation: none !important;

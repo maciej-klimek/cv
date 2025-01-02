@@ -8,16 +8,20 @@
     <link id="theme-stylesheet" rel="stylesheet" href="css/colors_dark.css" />
     <link rel="stylesheet" href="css/decorations.css" />
     <link rel="stylesheet" href="css/print.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="scripts/numbers.js" defer></script>
     <script src="scripts/download.js" defer></script>
   </head>
   <body>
     <div class="action-panel">
-      <!-- Theme toggle switch button -->
       <div class="theme-toggle">
         <span>Change the theme</span>
         <label class="switch">
@@ -76,10 +80,10 @@
             <section class="about-me">
               <h2>.about-me</h2>
               <p>
-                Hi! I’m Maciej Klimek, third year student of ICT at AGH University of Science and Technology. I’m
-                currently seeking my first commercial experience in the form of an internship. I am particularly
-                interested in networking, Dev/TechOps, network security and web development, areas that I am passionate
-                about and eager to utilize in my work.
+                Hi! I’m Maciek, third year student of ICT (Teleinformatyka) at AGH University of Science and Technology.
+                I’m currently seeking my first commercial experience in the form of an internship. I am particularly
+                interested in overall networking, Dev/TechOps, network security and web development. I am eager to
+                continually develop my skills and knowledge contributing to meaningful projects.
               </p>
             </section>
           </div>
@@ -91,43 +95,48 @@
                   <a href="https://sylabusy.agh.edu.pl/pl/document/326e39b2-1a45-4425-b1f2-a5f6636649ba.pdf"
                     >Operating Systems</a
                   >
-                  - Linux, LVM, TCP/IP sockets...
+                  - <span style="color: var(--blue)">Linux, Bash,</span> TCP/IP sockets...
                 </li>
                 <li>
                   <a href="https://sylabusy.agh.edu.pl/pl/document/28c1bd99-92df-4550-815f-bc8afcc5d56d.pdf"
                     >Security of ICT Systems</a
                   >
-                  - Encryption techniques and Algorithms, principles of cyberSec...
+                  - <span style="color: var(--blue)">HTTPS</span>, Encryption techniques and Algorithms, principles of
+                  Cybersecurity...
                 </li>
                 <li>
                   <a href="https://sylabusy.agh.edu.pl/pl/document/aded32d4-1d14-499b-a70c-68451b1457d4.pdf"
                     >Web Development</a
                   >
-                  - HTTPS, React, Typescript, Tailwind CSS, nginx...
+                  -
+                  <span style="color: var(--blue)">React, TypeScript, Tailwind CSS, Apache server, nginx</span>, HTML,
+                  CSS...
                 </li>
                 <li>
                   <a href="https://sylabusy.agh.edu.pl/pl/document/96f8a5ab-764e-47bb-a7c8-52b0849cebc8.pdf"
                     >Algorithms and Data Structures</a
                   >
-                  - Python, problem solving...
-                </li>
-                <li>
-                  <a href="https://sylabusy.agh.edu.pl/pl/document/afdffb42-fdab-4034-b2b6-8e43520a52fa.pdf"
-                    >Software Engineering</a
-                  >
-                  - Agile, Scrum, Software Documentation...
+                  - <span style="color: var(--blue)">Python</span>, problem solving...
                 </li>
                 <li>
                   <a href="https://sylabusy.agh.edu.pl/pl/document/00640208-bd53-402f-b20a-a1b5975eeb10.pdf"
                     >Large-Scale Data Distribution Systems</a
                   >
-                  - Virtualization, Cloud Computing, Docker, system design...
+                  - Virtualization, Cloud Computing,
+                  <span style="color: var(--blue)">Docker, AWS</span>...
                 </li>
                 <li>
                   <a href="https://sylabusy.agh.edu.pl/pl/document/ce222a06-ebcb-499e-b94a-104ba57eec10.pdf"
                     >Next Generation IP Networks</a
                   >
-                  - IP, BGP, OSPF, ISIS, ARP...
+                  - <span style="color: var(--blue)">IP, BGP, OSPF, ISIS, ARP</span>...
+                </li>
+                <li>
+                  <a href="https://sylabusy.agh.edu.pl/pl/document/afdffb42-fdab-4034-b2b6-8e43520a52fa.pdf"
+                    >Software Engineering</a
+                  >
+                  - <span style="color: var(--blue)">Agile, Scrum,</span> working with multiple APIs, software
+                  documentation...
                 </li>
               </ul>
             </section>
@@ -136,12 +145,13 @@
                 <img src="images/agh_logo_white.png" alt="AGH University Logo" class="school-logo" />
                 <div>
                   <p><strong>AGH University of Science and Technology</strong></p>
-                  <p>(2022 - present)</p>
+                  <p>ICT (Teleinformatyka)</p>
+                  <span style="color: var(--fg4)">2022 - present</span>
                 </div>
               </div>
               <section class="languages">
                 <p>🇵🇱 <strong>Polish</strong> (native)</p>
-                <p>🇬🇧 <strong>English C1</strong> - ACERT Certificate</p>
+                <p>🇬🇧 <strong>English C1</strong> (ACERT Certificate)</p>
               </section>
             </section>
           </div>
@@ -154,7 +164,7 @@
                     ><strong>🎧 Guess the Beat!</strong></a
                   >
 
-                  <p>A web application that allows users to guess songs based on short clips.</p>
+                  <p>A web application that allows users to guess songs based on short clips or album covers.</p>
                   <i class="fa fa-github fa-lg"></i>
                   <a class="small-link" href="https://github.com/maciej-klimek/guess-the-beat-webapp" target="_blank">
                     https://github.com/maciej-klimek/guess-the-beat-webapp
@@ -164,7 +174,10 @@
                   <a href="https://github.com/maciej-klimek/english-or-spanish" target="_blank"
                     ><strong>💬 English or Spanish</strong></a
                   >
-                  <p>A game that tests the player’s ability to distinguish between English and Spanish words.</p>
+                  <p>
+                    A web app designed as a language assistant (powered by a LLM) that serves to help users learn
+                    English and Spanish.
+                  </p>
                   <i class="fa fa-github fa-lg"></i>
                   <a class="small-link" href="https://github.com/maciej-klimek/english-or-spanish" target="_blank">
                     https://github.com/maciej-klimek/english-or-spanish
@@ -184,7 +197,7 @@
                   <a href="https://github.com/maciej-klimek/simple-server-contenerizaion" target="_blank"
                     ><strong>📦 Simple Server Contenerizaion</strong></a
                   >
-                  <p>Simple project made for learning Docker and contenerizaion principles</p>
+                  <p>Project made for learning and presenting contenerizaion principles and Docker</p>
                   <i class="fa fa-github fa-lg"></i>
                   <a
                     class="small-link"
@@ -200,20 +213,27 @@
                   <a href="https://github.com/AGH-Code-Industry/ej-mordo-flanki" target="_blank"
                     ><strong>🎮 Ej Mordo Flanki?</strong></a
                   >
-                  <p>A collaborative project built with AGH Code Industry, featuring a game-like application.</p>
+                  <p>
+                    A project built with
+                    <a href="https://coin.agh.edu.pl/">AGH Code Industry</a>, featuring a game inspired by a popular
+                    student game.
+                  </p>
                   <i class="fa fa-github fa-lg"></i>
                   <a class="small-link" href="https://github.com/AGH-Code-Industry/ej-mordo-flanki" target="_blank">
                     https://github.com/AGH-Code-Industry/ej-mordo-flanki
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/maciej-klimek/job-scraper-desktop-app" target="_blank"
-                    ><strong>🗃️ JobScrapper</strong></a
+                  <a href="https://github.com/kurs0n/BITEHACK_2024" target="_blank"
+                    ><strong>🤲 Zdalny Wnuczek</strong></a
                   >
-                  <p>A desktop application for scraping IT job listings from various websites.</p>
+                  <p>
+                    A collaborative project created for <a href="https://bitehack.best.krakow.pl/">BITEHACK</a> 2024,
+                    web app designed to assist seniors in using technology.
+                  </p>
                   <i class="fa fa-github fa-lg"></i>
-                  <a class="small-link" href="https://github.com/maciej-klimek/job-scraper-desktop-app" target="_blank">
-                    https://github.com/maciej-klimek/job-scraper-desktop-app
+                  <a class="small-link" href="https://github.com/kurs0n/BITEHACK_2024" target="_blank">
+                    https://github.com/kurs0n/BITEHACK_2024
                   </a>
                 </li>
               </ul>

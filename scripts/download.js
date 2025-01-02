@@ -1,28 +1,17 @@
 document.getElementById("download-pdf").addEventListener("click", function () {
-  const { jsPDF } = window.jspdf;
+  const themeStylesheet = document.getElementById("theme-stylesheet");
+  let pdfFile;
 
-  // Create a new PDF instance
-  const doc = new jsPDF();
+  // Check the current theme and set the corresponding PDF file
+  if (themeStylesheet.getAttribute("href") === "css/colors_dark.css") {
+    pdfFile = "pdfs/maciej_klimek_cv_dark.pdf";
+  } else {
+    pdfFile = "pdfs/maciej_klimek_cv_light.pdf";
+  }
 
-  // Get the HTML content
-  const content = document.querySelector(".container");
-
-  // Use html2canvas to convert the content to an image
-  html2canvas(content, {
-    useCORS: true, // Enable CORS if you want external images to load
-    backgroundColor: null, // Preserve background color
-  })
-    .then(function (canvas) {
-      // Get the image data from the canvas
-      const imgData = canvas.toDataURL("image/png");
-
-      // Add the image to the PDF
-      doc.addImage(imgData, "PNG", 0, 0);
-
-      // Save the generated PDF
-      doc.save("Maciej_Klimek_CV.pdf");
-    })
-    .catch(function (error) {
-      console.error("Error generating PDF:", error);
-    });
+  // Create a temporary link element to trigger the download
+  const link = document.createElement("a");
+  link.href = pdfFile;
+  link.download = pdfFile.split("/").pop(); // Set the file name
+  link.click(); // Trigger the download
 });

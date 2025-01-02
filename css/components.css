@@ -82,7 +82,7 @@ footer {
 .courses-list li {
   position: relative;
   padding-left: 1.5em;
-  color: var(--bg4);
+  color: var(--fg4);
 }
 
 .courses-list li a {
